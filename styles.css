@@ -1,0 +1,126 @@
+:root {
+  --background: #1c1c1c;
+  --light-background: #292c51;
+  --cool-purple: #6c77ef;
+  --gray: #ced5d9;
+  --funkyred: 205, 24, 96;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-background);
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--background);
+  border-radius: 5px;
+  margin-top: 90px;
+  background-color: var(--background);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+img {
+  height: 450px;
+  border-radius: 5px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lefttext {
+  position: relative;
+  top: -220px;
+  background-color: rgba(var(--funkyred), 0.5);
+  width: 200px;
+  text-align: center;
+  font-size: 32px;
+  border-radius: 2px;
+}
+
+.right {
+  position: relative;
+  top: -20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.red {
+  color: rgba(var(--funkyred), 1);
+}
+
+.formrow {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.formrow label {
+  margin-bottom: 5px;
+}
+
+.formrow input {
+  width: 70%;
+  align-items: center;
+  background-color: rgba(var(--funkyred), 0.4);
+  border-radius: 5px;
+  color: var(--gray);
+  font-size: 15px;
+}
+
+button {
+  background-color: rgba(var(--funkyred), 1);
+  color: var(--gray);
+  font-weight: bolder;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+a {
+  color: rgba(var(--funkyred), 1);
+}
+
+@media only screen and (min-width: 700px) {
+  .main {
+    flex-direction: row;
+  }
+  .lefttext {
+    position: absolute;
+    top: 250px;
+  }
+  .right {
+    position: relative;
+    top: 100px;
+    width: 400px;
+  }
+
+  .formrow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+}
